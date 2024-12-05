@@ -109,14 +109,14 @@ export default (props: TestimonialsProps) => {
 								max: 748,
 								min: 0
 							},
-							items: 2,
+							items: 1,
 						},
 						tablet: {
 							breakpoint: {
 								max: 1200,
 								min: 749
 							},
-							items: 3,
+							items: 2,
 						}
 					}}
 					rewind={false}
