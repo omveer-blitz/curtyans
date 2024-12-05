@@ -86,8 +86,8 @@ export default (props: TestimonialsProps) => {
 					arrows={false}
 					showDots
 					renderDotsOutside
-					autoPlay
-					autoPlaySpeed={1000}
+					autoPlay={true}
+					autoPlaySpeed={3000}
 					centerMode={false}
 					containerClass="container"
 					draggable
@@ -95,7 +95,7 @@ export default (props: TestimonialsProps) => {
 					infinite
 					keyBoardControl
 					minimumTouchDrag={80}
-					pauseOnHover
+					pauseOnHover={true}
 					responsive={{
 						desktop: {
 							breakpoint: {
