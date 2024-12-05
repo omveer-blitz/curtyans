@@ -5,7 +5,7 @@ import { CurtyansLogoProps } from "./types";
 
 
 export default (props: CurtyansLogoProps) => {
-	const { width = 160, height = 48, ...rest} = props;
+	const { width = 150, height = 48, ...rest} = props;
 	return (
 		<Link to="/" onClick={() => window.scrollTo(0,0)}>
 			<img
@@ -16,6 +16,7 @@ export default (props: CurtyansLogoProps) => {
 					width: ${width}px;
 					height: auto;
 					max-height: ${height}px;
+					margin-right: var(--spacing-xs);
 				`}
 				alt="ShopDeck-logo"
 				src="http://d3m6ysvindj7rm.cloudfront.net/curtyans-logo.png"
