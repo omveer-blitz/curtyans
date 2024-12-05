@@ -1,0 +1,4 @@
+{
+  "presets": [["@babel/env", {"targets": {"node": "20"}}]],
+  "plugins": ["@babel/plugin-transform-object-rest-spread"]
+}

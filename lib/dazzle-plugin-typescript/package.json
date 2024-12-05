@@ -1,0 +1,26 @@
+{
+  "name": "dazzle-plugin-typescript",
+  "version": "1.0.0",
+  "description": "Use TypeScript with Dazzle",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:Blitzscale-19/dazzle.git",
+    "directory": "packages/dazzle-plugin-typescript"
+  },
+  "author": "rahul.ranjan@blitzscale.co",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "ts-loader": "^9.5.1",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependencies": {
+    "dazzle": "1.0.0",
+    "dazzle-dev-utils": "1.0.0",
+    "webpack": "~4||~5"
+  }
+}

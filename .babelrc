@@ -1,0 +1,8 @@
+{
+  "compact": true,
+  "presets": [
+    "dazzle/babel",
+    "@babel/preset-typescript",
+    "@emotion/babel-preset-css-prop"
+  ]
+}

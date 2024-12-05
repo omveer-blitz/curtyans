@@ -1,0 +1,53 @@
+{
+  "name": "dazzle-start-server-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Automatically start your server once Webpack's build completes.",
+  "main": "dist/StartServerPlugin.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel src -d dist",
+    "release": "github-semantic-version --bump --changelog --push --publish",
+    "prepublishOnly": "yarn run build",
+    "pretest": "yarn run build",
+    "test-project": "sh test/test-project.sh test-project",
+    "test-project-hmr": "sh test/test-project.sh test-project-hmr",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:Blitzscale-19/dazzle.git",
+    "directory": "packages/dazzle-start-server-webpack-plugin"
+  },
+  "keywords": [
+    "webpack",
+    "server",
+    "start",
+    "watch",
+    "restart",
+    "express"
+  ],
+  "author": "rahul.ranjan@blitzscale.co",
+  "license": "MIT",
+  "gsv": {
+    "majorLabel": "Version: Major",
+    "minorLabel": "Version: Minor",
+    "patchLabel": "Version: Patch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/plugin-transform-object-rest-spread": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/register": "^7.23.7",
+    "expect": "^29.7.0",
+    "express": "^4.19.2",
+    "mocha": "^10.4.0",
+    "rimraf": "^5.0.7"
+  },
+  "peerDependencies": {
+    "webpack": "~5"
+  }
+}

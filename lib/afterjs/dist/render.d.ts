@@ -1,0 +1,2 @@
+import { AfterRenderOptions } from './types';
+export declare const render: <T extends unknown>(params: Pick<Pick<import("./types").AfterRenderAppOptions<T>, "req" | "res" | "assets" | "routes" | "document" | "chunks" | "scrollToTop" | "customRenderer" | "customParams">, "req" | "res" | "assets" | "routes" | "document" | "chunks" | "scrollToTop" | "customRenderer" | "customParams">) => Promise<string>;

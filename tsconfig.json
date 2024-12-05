@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+		"suppressImplicitAnyIndexErrors": true,
+    "lib": ["es6", "es2015", "es2017", "dom"],
+    "module": "esnext",                       // webpack will consume the file -> https://www.typescriptlang.org/docs/handbook/modules/guides/choosing-compiler-options.html
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "strict": false,
+    "pretty": true,
+    "ignoreDeprecations": "5.0",
+    "target": "ES5",
+		"baseUrl": "./src/"
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "dazzle.config.js",
+		"lib"
+  ],
+  "types": ["typePatches", "node", "webpack-env"]
+}

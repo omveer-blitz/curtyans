@@ -1,0 +1,40 @@
+{
+  "name": "babel-preset-dazzle",
+  "version": "1.0.0",
+  "description": "Babel presets for Dazzle",
+  "main": "index.js",
+  "author": "rahul.ranjan@blitzscale.co",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:Blitzscale-19/dazzle.git",
+    "directory": "packages/babel-preset-dazzle"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "babel-plugins/amp-attributes.js",
+    "babel-plugins/commonjs.js",
+    "babel-plugins/jsx-pragma.js",
+    "babel-plugins/no-anonymous-default-export.js",
+    "babel-plugins/optimize-hook-destructuring.js"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/plugin-syntax-bigint": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-class-properties": "^7.24.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.1",
+    "@babel/plugin-transform-numeric-separator": "^7.24.1",
+    "@babel/plugin-transform-object-rest-spread": "^7.24.5",
+    "@babel/plugin-transform-optional-chaining": "^7.24.5",
+    "@babel/plugin-transform-runtime": "^7.24.3",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.5",
+    "@babel/preset-typescript": "^7.24.5",
+    "@babel/runtime": "^7.24.5",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "chalk": "^4.1.1"
+  }
+}
