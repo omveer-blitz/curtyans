@@ -1,1 +1,1 @@
-# curtyans
+# curtyans - v1.0.0
