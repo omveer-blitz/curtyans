@@ -5,7 +5,7 @@ import { CurtyansLogoProps } from "./types";
 
 
 export default (props: CurtyansLogoProps) => {
-	const { width = 203, height = 48, ...rest} = props;
+	const { width = 160, height = 48, ...rest} = props;
 	return (
 		<Link to="/" onClick={() => window.scrollTo(0,0)}>
 			<img
