@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "shopdeck_home",
+      name: "curtyans",
       script: "build/server.js",
       exec_mode: "cluster",
       instances: 1,
