@@ -103,7 +103,7 @@ const ProductItem = (props: ProductItemProps) => {
 						<FlexboxItem colspan={24} colspanXL={24}>
 							<Flexbox direction="row" justify="start" align="flex-end">
 								<Text as="span" fontStyleGuide="heading7" color="flamingo" align="center" textWrap="pretty">{`AED ${props.selling_price}`}</Text>
-								<Text as="span" fontStyleGuide="body5" color="mine-shaft" align="center" textWrap="pretty">{"onwards"}</Text>
+								<Text as="p" fontStyleGuide="body5" color="mine-shaft" align="center" textWrap="pretty" ml="xs">{"onwards"}</Text>
 							</Flexbox>
 						</FlexboxItem>
 					</Flexbox>
