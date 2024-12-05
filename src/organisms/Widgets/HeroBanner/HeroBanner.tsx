@@ -14,7 +14,7 @@ const bannerUrl = 'http://d3m6ysvindj7rm.cloudfront.net/hero-banner.jpg';
 
 const styles = {
 	heroBannerWrapper: css`
-		background-color: var(--color-flamingo0500);
+		background-color: var(--color-flamingo100);
 		position: relative;
 
 	`,

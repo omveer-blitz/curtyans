@@ -19,6 +19,7 @@ export type FlexboxProps = {
 export type FlexboxItemProps = {
 	colspan: number | "auto";
 	colspanXL?: number | "auto";
+	colspanMD?: number | "auto";
 	as?: React.ElementType;
 	css?: SerializedStyles;
 	mt?: Spacing;

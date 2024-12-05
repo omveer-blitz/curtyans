@@ -13,6 +13,8 @@ const styles = {
 		border-radius: var(--spacing-sm);
 		aspect-ratio: 1;
 		cursor: pointer;
+		width: 100%;
+		max-height: 100%;
 	`,
 	imageStyle: css`
 		width: 100%;

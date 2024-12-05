@@ -12,6 +12,7 @@ const styles = {
 		border: 2px solid var(--color-flamingo);
 		border-right: 0;
 		border-radius: var(--spacing-sm);
+		overflow: auto;
 	`,
 	base: css`
 		font-family: var(--font-family-heading7);
@@ -26,6 +27,7 @@ const styles = {
 		color: var(--color-white);
 		transition: all .3s;
 		cursor: pointer;
+		white-space: nowrap;
 	`,
 	secondaryType: css`
 		border-right: 2px solid var(--color-flamingo);
@@ -33,6 +35,7 @@ const styles = {
 		color: var(--color-flamingo);
 		transition: all .3s;
 		cursor: pointer;
+		white-space: nowrap;
 
 		&:hover {
 			background-color: var(--color-flamingo);

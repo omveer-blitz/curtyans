@@ -10,7 +10,7 @@ import Image from "atoms/Image";
 
 const styles = {
 	wrapper: css`
-		background-color: var(--color-flamingo0500);
+		background-color: var(--color-flamingo100);
 		border-radius: var(--spacing-xxl);
 		padding: var(--spacing-2xl);
 		position: relative;

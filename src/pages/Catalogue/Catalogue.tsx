@@ -29,7 +29,7 @@ const response = {
 	data: {
 		product_name: "sheer",
 		sku_id: "product-001",
-		description: "Sheer fabric curtains, allowing sunlight to enter your room and softening it. Ideal to get privacy in a bedroom or living room.",
+		description: "Sheer fabric curtains, allowing sunlight to enter your room and softening it. Ideal to get privacy in a bedroom or living room. Sheer fabric curtains, allowing sunlight to enter your room and softening it. Ideal to get privacy in a bedroom or living room. Sheer fabric curtains, allowing sunlight to enter your room and softening it. Ideal to get privacy in a bedroom or living room. Sheer fabric curtains, allowing sunlight to enter your room and softening it. Ideal to get privacy in a bedroom or living room.",
 		mrp: 513,
 		selling_price: 513,
 		emi_option: {
@@ -61,10 +61,6 @@ const response = {
 }
 
 const styles = {
-	imageZoomerStyle: css`
-		width: 100%;
-		height: 100%;
-	`,
 	imageDisplayStyle: css`
 		width: 100%;
 		height: 100%;
@@ -110,7 +106,7 @@ const FullScreenImage = (props: FullScreenImageProps) => {
 				>
 					<Cross fill="white" width={16} height={16} />
 				</Button>
-				<ImageZoomer passedCss={styles.imageZoomerStyle} src={props.media.url} />
+				<ImageZoomer src={props.media.url} />
 			</Card>
 		</BaseModal>
 	)

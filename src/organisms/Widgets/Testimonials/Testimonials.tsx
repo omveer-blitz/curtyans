@@ -32,20 +32,6 @@ const styles = {
 	reviewWrapper: css`
 		overflow: auto;
 		height: 240px;
-
-		&::-webkit-scrollbar {
-			width: var(--spacing-sm);
-		};
-
-		&::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px var(--color-flamingo100);
-			border-radius: var(--spacing-sm);
-		}
-
-		&::-webkit-scrollbar-thumb {
-			border-radius: var(--spacing-sm);
-			-webkit-box-shadow: inset 0 0 6px var(--color-flamingo500);
-		}
 	`,
 	carouselWrapper: css`
 		position: relative;

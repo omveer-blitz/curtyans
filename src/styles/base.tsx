@@ -12,9 +12,12 @@ export default css`
 		font-size: var(--font-size-body5);
 		line-height: var(--font-lineheight-body5);
 		scroll-behavior: smooth;
+	}
 
+	* {
 		&::-webkit-scrollbar {
 			width: var(--spacing-sm);
+			height: var(--spacing-sm);
 		};
 
 		&::-webkit-scrollbar-track {

@@ -639,13 +639,13 @@ const CollectionPage = (props: CollectionPageProps) => {
 					<FlexboxItem colspan={"auto"} colspanXL={"auto"} mb="xxl">
 						<Text as="h1" fontStyleGuide="heading3" color="mine-shaft">{`Our Products`}</Text>
 					</FlexboxItem>
-					<FlexboxItem colspan={"auto"} colspanXL={"auto"} mb="xxl">
+					<FlexboxItem css={css`overflow: hidden;`} colspan={"auto"} colspanXL={"auto"} mb="xxl">
 						<ChipButton items={categories} value={selectedCategory} onChange={setSelectedCategory} />
 					</FlexboxItem>
 				</Flexbox>
 				<Flexbox direction="row" justify="flex-start" align="stretch">
 					{productsToRender.map((product, index) => (
-						<FlexboxItem key={`productcard-${index}-${product.sku_id}`} colspan={12} colspanXL={8} mb="lg">
+						<FlexboxItem key={`productcard-${index}-${product.sku_id}`} colspan={24} colspanMD={12} colspanXL={8} mb="lg">
 							<div
 								css={css`
 									padding: 0 var(--spacing-sm);

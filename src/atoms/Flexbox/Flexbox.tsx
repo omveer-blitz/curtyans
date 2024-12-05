@@ -26,7 +26,7 @@ const Flexbox = (props: PropsWithChildren<FlexboxProps>): JSX.Element => {
 }
 
 export const FlexboxItem = (props: PropsWithChildren<FlexboxItemProps>): JSX.Element => {
-	const { colspan, colspanXL = colspan, as: As = 'div', children, mt, mr, ml, mb, ...rest } = props;
+	const { colspan, colspanMD = colspan, colspanXL = colspan, as: As = 'div', children, mt, mr, ml, mb, ...rest } = props;
 	return (
 		<As
 			css={css`
@@ -38,6 +38,12 @@ export const FlexboxItem = (props: PropsWithChildren<FlexboxItemProps>): JSX.Ele
 				${mr && `margin-right: var(--spacing-${mr});`}
 				${ml && `margin-left: var(--spacing-${ml});`}
 				${mb && `margin-bottom: var(--spacing-${mb});`}
+				@media(min-width: 768px) and (max-width: 1200px) {
+					${colspanMD !== "auto" && `
+						width: ${(colspanMD / 24) * 100}%;
+						flex: 0 0 ${(colspanMD / 24) * 100}%;
+					`};
+				}
 				@media(min-width: 1200px) {
 					${colspanXL !== "auto" && `
 						width: ${(colspanXL / 24) * 100}%;

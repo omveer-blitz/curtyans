@@ -23,7 +23,7 @@ const styles = {
 	`,
 	trustmarkerItem: css`
 		border-radius: var(--spacing-sm);
-		background-color: var(--color-flamingo0500);
+		background-color: var(--color-flamingo100);
 		padding: var(--spacing-xxl);
 		height: 100%;
 	`,

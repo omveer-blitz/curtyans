@@ -23,7 +23,7 @@ export default React.forwardRef((props: PropsWithChildren<WidgetContainerType>, 
 		<As
 			css={css`
 				${enableBackground && css`
-					background-color: var(--color-flamingo0500);
+					background-color: var(--color-flamingo100);
 				`}
 			`}
 			ref={ref as any}
