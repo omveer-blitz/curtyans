@@ -96,14 +96,14 @@ const ProductItem = (props: ProductItemProps) => {
 					<Image width="300" height="225" loading="lazy" aspect-ratio="1.5" src={props.media[0].url} />
 				</ResponsiveDiv>
 				<ResponsiveDiv css={styles.contentWrapper}>
-					<Flexbox direction="row" justify="space-between" align="flex-start">
-						<FlexboxItem colspan={16} colspanXL={16}>
+					<Flexbox direction="column" justify="space-between" align="flex-start">
+						<FlexboxItem colspan={24} colspanXL={24} mb="xs">
 							<Text fontStyleGuide="heading7" color="mine-shaft" textWrap="pretty">{props.product_name}</Text>
 						</FlexboxItem>
-						<FlexboxItem colspan={8} colspanXL={8}>
-							<Flexbox direction="row" justify="space-between" align="flex-end">
-								<Text fontStyleGuide="heading7" color="flamingo" align="center" textWrap="pretty">{`AED ${props.selling_price}`}</Text>
-								<Text fontStyleGuide="body5" color="mine-shaft" align="center" textWrap="pretty">{"onwards"}</Text>
+						<FlexboxItem colspan={24} colspanXL={24}>
+							<Flexbox direction="row" justify="start" align="flex-end">
+								<Text as="span" fontStyleGuide="heading7" color="flamingo" align="center" textWrap="pretty">{`AED ${props.selling_price}`}</Text>
+								<Text as="span" fontStyleGuide="body5" color="mine-shaft" align="center" textWrap="pretty">{"onwards"}</Text>
 							</Flexbox>
 						</FlexboxItem>
 					</Flexbox>
