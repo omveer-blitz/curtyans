@@ -13,20 +13,19 @@ import { CreateFormType, FormValidationError } from "./types";
 import { useNavigate } from "react-router-dom";
 
 // services and events
-import { createBookDemoForm } from "services/bookDemoForm";
+import { createBookVisitForm } from "services/bookVisitForm";
 import Input from "molecules/Input";
 import Radio from "molecules/Radio";
 import RadioGroup from "molecules/RadioGroup";
 import Header from "organisms/Header";
 import Footer from "organisms/Footer";
-import Checkbox from "molecules/Checkbox";
-import CheckboxGroup from "molecules/CheckboxGroup";
 import Button from "atoms/Button";
 import ArrowWithTail from "icons/ArrowWithTail";
 import Spinner from "atoms/Spinner";
 import PageContainer from "atoms/PageContainer";
 import Card from "molecules/Card";
 import Textarea from "molecules/Textarea";
+import { PageSpinner } from "atoms/Spinner/Spinner";
 
 
 const validationModel = SchemaModel({
@@ -39,8 +38,8 @@ const validationModel = SchemaModel({
 	email: StringType().isEmail("Invalid email address"),
 	phone: StringType()
 		.isRequired("This field is mandatory")
-		.pattern(/^[5]+[024568]+[0-9]{7}$/, "Phone Number should contain only digits")
-		.rangeLength(9, 9, "Please enter a 10-digit Contact number"),
+		.pattern(/^[5]+[024568]+[0-9]{7}$/, "Phone Number must start with 50/52/54/55/56/58")
+		.rangeLength(9, 9, "Please enter a 9-digit Contact number"),
 	address: StringType()
 		.isRequired("This field is mandatory"),
 	city: StringType().isRequired("This field is mandatory"),
@@ -117,7 +116,6 @@ export default () => {
 	});
 
 	const [loading, setLoading] = useState<boolean>(false);
-	const [showOtherCategoriesInput, setShowOtherCategoriesInput] = useState(false);
 	const [formScreen, setFormScreen] = React.useState<'form' | 'thankyou'>('form');
 
 	const isFormValid =
@@ -206,31 +204,28 @@ export default () => {
 
 
 	const handleBookDemoForm = useCallback((): void => {
-		// const { contactNumber, brandName, email, hasGst, platform, numberOfOrders, categories, otherCategory } = formData;
-		// let finalCategories = [...categories];
-		// if (otherCategory.trim() !== "") {
-		// 	finalCategories = [...categories, otherCategory.trim()];
-		// 	finalCategories = finalCategories.filter((category) => category !== "others")
-		// }
-		// setLoading(true);
-		// createBookDemoForm({
-		// 	brand_name: brandName,
-		// 	contact_number: contactNumber,
-		// 	email: email,
-		// 	has_gst: hasGst,
-		// 	shopping_platform: platform.length > 0 ? platform : [" "],
-		// 	number_of_orders: numberOfOrders,
-		// 	categories: finalCategories
-		// })
-		// 	.then(() => {
-		// 		setLoading(false);
-		// 		setFormScreen('thankyou');
-		// 	})
-		// 	.catch(() => {
-		// 		setLoading(false);
-		// 	});
-	}, [formData, setLoading, createBookDemoForm, navigate])
-	console.log(minimumDate, '  ', maximumDate);
+		setLoading(true);
+		createBookVisitForm({
+			first_name: formData.firstName,
+			last_name: formData.lastName,
+			email: formData.email,
+			phone: formData.phone,
+			address: formData.address,
+			flat_no: formData.flatNo,
+			city: formData.city,
+			visit_date: formData.visitDate,
+			category_type: formData.categoryType,
+			comment: formData.comment,
+		})
+			.then(() => {
+				setLoading(false);
+				setFormScreen('thankyou');
+			})
+			.catch(() => {
+				setLoading(false);
+			});
+	}, [formData, setLoading, createBookVisitForm, navigate])
+
 	return (
 		<>
 			<Header />
@@ -247,9 +242,7 @@ export default () => {
 									css={styles.formWrapper}
 								>
 									{loading && (
-										<ResponsiveDiv css={styles.loaderWrapper}>
-											<Spinner />
-										</ResponsiveDiv>
+										<PageSpinner />
 									)}
 									<Flexbox direction="row" justify="space-between" align="center" gap={16} mb="sm">
 										<FlexboxItem colspan={24} colspanXL={11.5}>
@@ -258,7 +251,6 @@ export default () => {
 												mb="sm"
 												title="First Name"
 												required={true}
-												placeholder="Enter your first name"
 												name="firstName"
 												maxLength={40}
 												value={formData.firstName}
@@ -273,7 +265,6 @@ export default () => {
 												mb="sm"
 												title="Last Name"
 												required={true}
-												placeholder="Enter your last name"
 												name="lastName"
 												maxLength={40}
 												value={formData.lastName}
@@ -290,7 +281,6 @@ export default () => {
 												required
 												fullWidth={true}
 												title="E-mail Address"
-												placeholder="Enter your mail address"
 												name="email"
 												value={formData.email}
 												onChange={handleEmailChange}
@@ -304,7 +294,6 @@ export default () => {
 												fullWidth={true}
 												required
 												title="Phone Number"
-												placeholder="5X1234567"
 												leftAddon={<Text fontStyleGuide="body4" color="white">{"+971"}</Text>}
 												name="phone"
 												value={formData.phone}
@@ -321,7 +310,6 @@ export default () => {
 												mb="sm"
 												title="Address"
 												required={true}
-												placeholder="Enter your address"
 												name="address"
 												maxLength={40}
 												value={formData.address}
@@ -335,7 +323,6 @@ export default () => {
 												fullWidth={true}
 												mb="sm"
 												title="Flat Number/Building Name"
-												placeholder="Enter your flat number"
 												name="flatNo"
 												maxLength={40}
 												value={formData.flatNo}
@@ -352,7 +339,6 @@ export default () => {
 												mb="sm"
 												title="City"
 												required={true}
-												placeholder="Enter your city"
 												name="city"
 												maxLength={40}
 												value={formData.city}
@@ -368,7 +354,6 @@ export default () => {
 												mb="sm"
 												required
 												title="Date of the Visit"
-												placeholder="Enter your preferred date"
 												name="date"
 												min={minimumDate}
 												max={maximumDate}
@@ -407,7 +392,6 @@ export default () => {
 												title="Comment"
 												name="comment"
 												id="comment"
-												placeholder="Add your comment here"
 												required={false}
 												rows={4}
 												value={formData.comment}
@@ -426,7 +410,7 @@ export default () => {
 											onClick={handleBookDemoForm}
 											disabled={!isFormValid || loading}
 										>
-											Confirm Visit
+											Confirm Your Visit
 										</Button>
 									</ResponsiveDiv>
 								</ResponsiveDiv>
@@ -436,21 +420,20 @@ export default () => {
 				)}
 				{formScreen === 'thankyou' && (
 					<Flexbox direction="row" justify="center" align="center" mt="2xl" mb="2xl">
-						<FlexboxItem colspan={24}>
+						{/* <FlexboxItem colspan={24}>
 							<SuccessGif />
-						</FlexboxItem>
-						<FlexboxItem colspan={24} colspanXL={12}>
-							<Text fontStyleGuide="heading3" primaryGradient align="center" mb="sm">
+						</FlexboxItem> */}
+						<FlexboxItem colspan={24}>
+							<Text fontStyleGuide="heading3" color="flamingo" align="center" mb="sm">
 								Thank you for your interest!
 							</Text>
 							<Text as="p" color="mine-shaft" align="center" fontStyleGuide="body3" mb="2xl" textWrap="balance">
-								Our consultants will be contacting you within 24-48 hours for your FREE demo session.
+								Our consultants will be contacting you within 24-48 hours to schedule your free visit.
 							</Text>
 							<Flexbox direction="row" justify="center" align="center">
-								<Button type="primary" onClick={() => navigate("/")}>
+								<Button type="secondary" onClick={() => navigate("/collection")}>
 									<Flexbox direction="row" justify="center" align="center">
-										<ArrowWithTail width={16} height={16} direction={"left"} />&nbsp;
-										Back to Home
+										Explore Our Collection
 									</Flexbox>
 								</Button>
 							</Flexbox>

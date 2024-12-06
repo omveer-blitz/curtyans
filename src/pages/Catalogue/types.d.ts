@@ -1,11 +1,10 @@
+import { ProductPageDataResponse } from "services/types";
 import { Media, Product } from "typings/product.type";
 
 export type CataloguePageProps = {
-	data: {
+	pagedata: {
 		data_type: 'product',
-		code: number;
-		data: Product;
-	};
+	} & ProductPageDataResponse;
 	isLoading: boolean;
 }
 

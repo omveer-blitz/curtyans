@@ -23,7 +23,7 @@ import Whatsapp from "icons/Whatsapp";
 
 const styles = {
 	footerWrapper: css`
-		background-color: var(--color-spicy-mix);
+		background-color: var(--color-flamingo100);
 	`,
 	addressBarWrapper: css`
 		cursor: pointer;

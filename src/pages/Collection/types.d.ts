@@ -1,12 +1,8 @@
-import { Product } from "typings/product.type";
+import { CollectionPageDataResponse } from "services/types";
 
 export type CollectionPageProps = {
-	data: {
+	pagedata: {
 		data_type: 'collection',
-		code: number;
-		data: {
-			entities: Product[];
-		}
-	}
+	} & CollectionPageDataResponse
 	isLoading: boolean;
 }

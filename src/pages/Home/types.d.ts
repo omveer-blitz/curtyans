@@ -1,10 +1,9 @@
-import { Product } from "typings/product.type";
+
+import { HomePageDataResponse } from "services/types";
 
 export type HomePageProps = {
-	data: {
-		data_type: 'home',
-		code: number;
-		data: any;
-	};
+	pagedata: {
+		data_type: 'home'
+	} & HomePageDataResponse;
 	isLoading: boolean;
 }

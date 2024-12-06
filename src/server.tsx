@@ -44,6 +44,7 @@ server
 				chunks,
 				document: Document,
 				customRenderer,
+				scrollToTop: true,
 				customParams: {
 					locals: req['locals']
 				}

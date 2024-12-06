@@ -9,18 +9,18 @@ import Flexbox from "atoms/Flexbox";
 
 const styles = {
 	baseStyle: css`
-		background-color: var(--color-white);
+		background-color: var(--color-flamingo0500);
 		border-radius: var(--spacing-sm);
-		border: 1px solid var(--color-flamingo);
+		border: 1px solid var(--color-flamingo0500);
 		padding: var(--spacing-md);
 		color: var(--color-mine-shaft);
 		flex-grow: 4;
 
 		// fonts
-		font-family: var(--font-family-body4);
-		font-size: var(--font-size-body4);
-		font-weight: var(--font-weight-body4);
-		line-height: var(--font-lineheight-body4);
+		font-family: var(--font-family-heading7);
+		font-size: var(--font-size-heading7);
+		font-weight: var(--font-weight-heading7);
+		line-height: var(--font-lineheight-heading7);
 
 		&::placeholder {
 			color: var(--color-dusty-gray);
@@ -53,7 +53,6 @@ const styles = {
 	leftAddonStyle: css`
 		padding: var(--spacing-md);
 		background-color: var(--color-flamingo);
-		border: 1px solid var(--color-flamingo);
 		color: var(--color-white);
 		border-top-left-radius: var(--spacing-sm);
 		border-bottom-left-radius: var(--spacing-sm);
@@ -88,7 +87,7 @@ export default (props: InputProps): JSX.Element => {
 					${fullWidth && styles.fullWidthStyle};
 				`}
 			>
-				<Flexbox direction="row" justify="start" align="center">
+				<Flexbox direction="row" justify="start" align="stretch">
 					{leftAddon && (
 						<ResponsiveDiv css={styles.leftAddonStyle}>
 							{leftAddon}

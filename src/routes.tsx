@@ -1,5 +1,6 @@
 import React from "react";
 import { asyncComponent } from "after";
+import { PageSpinner } from "atoms/Spinner/Spinner";
 
 export default [
 
@@ -7,7 +8,7 @@ export default [
 		path: "/styleguide",
 		Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "Styleguide" */ "./pages/Styleguide"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "Styleguide"
     }),
 	},
@@ -15,7 +16,7 @@ export default [
     path: "/",
     Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "Home" */ "./pages/Home"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "Home"
     }),
   },
@@ -23,7 +24,7 @@ export default [
     path: "/about-us",
     Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "about-us" */ "./pages/AboutUs"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "about-us"
     }),
   },
@@ -31,7 +32,7 @@ export default [
     path: "/collection",
     Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "collection-page" */ "./pages/Collection"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "collection-page"
     }),
   },
@@ -39,7 +40,7 @@ export default [
     path: "/product/:sku_id",
     Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "catalogue-page" */ "./pages/Catalogue"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "catalogue-page"
     }),
   },
@@ -47,7 +48,7 @@ export default [
     path: "/book-visit-form",
     Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "book-visit-form" */ "./pages/BookDemoForm"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "book-visit-form"
     }),
   },
@@ -55,7 +56,7 @@ export default [
 		path: "/terms",
 		Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "TermsAndConditions" */ "./pages/TermsAndConditions"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "TermsAndConditions"
     }),
 	},
@@ -63,7 +64,7 @@ export default [
 		path: "/faq",
 		Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "faq" */ "./pages/FAQ"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "faq"
     }),
 	},
@@ -71,7 +72,7 @@ export default [
 		path: "/privacyPolicy",
 		Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "PrivacyPolicy" */ "./pages/PrivacyPolicy"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "PrivacyPolicy"
     }),
 	},
@@ -79,7 +80,7 @@ export default [
 		path: "/privacy-policy",
 		Component: asyncComponent({
       loader: () => import(/* webpackChunkName: "PrivacyPolicy" */ "./pages/PrivacyPolicy"),
-      Placeholder: () => <div>...LOADING...</div>,
+      Placeholder: PageSpinner,
       chunkName: "PrivacyPolicy"
     }),
 	},

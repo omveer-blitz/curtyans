@@ -23,6 +23,7 @@ import { Ctx } from "after";
 import { Media } from "typings/product.type";
 import Card from "molecules/Card";
 import Cross from "icons/Cross";
+import { getProductPageData } from "services/pages";
 
 const response = {
 	code: 200,
@@ -113,14 +114,28 @@ const FullScreenImage = (props: FullScreenImageProps) => {
 }
 
 const Catalogue = (props: CataloguePageProps) => {
-	const { isLoading, data: responseData } = props;
+	const { isLoading, pagedata } = props;
 	const [selectedMedia, setSelectedMedia] = React.useState<Media | null>(null);
 
-	if (isLoading || !responseData || responseData.data_type !== 'product') return (
+	if (isLoading || !pagedata || pagedata.data_type !== 'product') return (
 		<PageSpinner />
 	);
 
-	const { data: product } =  responseData;
+	const { data: product } =  pagedata;
+
+	if(!Object.keys(product).length) return (
+		<>
+			<Header />
+			<PageContainer>
+				<Text textWrap="balance" fontStyleGuide="heading3" color="flamingo" align="center" mb="md">Oops! This product is currently not available</Text>
+				<Text textWrap="balance" fontStyleGuide="body4" color="mine-shaft" align="center" mb="md">It looks like we are out of this product or the product does not exist</Text>
+				<Flexbox direction="row" align="center" justify="center" mb="xl">
+					<Button type="secondary" to="/collection">Explore Our Collection</Button>
+				</Flexbox>
+			</PageContainer>
+			<Footer />
+		</>
+	)
 
 	return (
 		<>
@@ -224,12 +239,15 @@ Catalogue.getInitialProps = ({
 	customParams,
 	...rest
 }: Ctx<string>) => {
-	return Promise.resolve({
-		data: {
-			...response,
-			data_type: 'product'
+	const { sku_id: skuId = '' } = match.params;
+	return getProductPageData(skuId).then((response) => {
+		return {
+			pagedata: {
+				...response,
+				data_type: 'product'
+			}
 		}
-	});
+	})
 }
 
 export default Catalogue;

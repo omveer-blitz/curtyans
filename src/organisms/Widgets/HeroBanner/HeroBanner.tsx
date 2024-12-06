@@ -56,7 +56,7 @@ export default (props: HeroBannerProps) => {
 			<Flexbox direction="row" justify="space-between" align="center">
 				<FlexboxItem colspan={24} colspanXL={10}>
 					<ResponsiveDiv css={styles.contentWrapper}>
-						<Text fontStyleGuide="heading3" color="flamingo" textWrap="balance" mb="xs" align="center" alignXL="left">
+						<Text fontStyleGuide="heading3" color="flamingo" textWrap="balance" mb="md" align="center" alignXL="left">
 							{props.title}
 						</Text>
 						<Text fontStyleGuide="heading7" color="mine-shaft" textWrap="balance" align="center" alignXL="left">

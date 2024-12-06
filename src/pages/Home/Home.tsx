@@ -13,6 +13,9 @@ import Subline from "organisms/Widgets/Subline";
 import { Ctx } from "after";
 import { HomePageProps } from "./types";
 import { PageSpinner } from "atoms/Spinner/Spinner";
+import { getHomePageData } from "services/pages";
+import { ScrollRestoration } from "react-router-dom";
+import { isClient } from "utils/helper";
 
 const response = {
 	code: 200,
@@ -45,7 +48,8 @@ const response = {
 					product_name: "Blackout only",
 					selling_price: 450,
 				},
-				{ sku_id: "101",
+				{
+					sku_id: "101",
 					media: [{
 						type: "image",
 						url: "https://kurtains.ae/wp-content/uploads/2024/07/Rectangle-1067-1-300x225.png",
@@ -153,24 +157,24 @@ const response = {
 }
 
 const Home = (props: HomePageProps) => {
-	const { isLoading, data: responseData } = props;
+	const { isLoading, pagedata } = props;
 
-	if (isLoading || !responseData || responseData.data_type !== 'home') return (
+	if (isLoading || !pagedata || pagedata.data_type !== 'home') return (
 		<PageSpinner />
 	);
 
-	const { data } = responseData;
-	const { hero_banner = {}, subline = '', best_sellers = {}, features = {}, testimonials = {}, how_does_it_work = {} } = data;
+	const { data } = pagedata;
+	const { hero_banner, subline = '', best_sellers, features, testimonials, how_does_it_work } = data;
 
 	return (
 		<>
 			<Header />
-			<HeroBanner {...hero_banner} />
-			<Subline text={subline} />
-			<ShopOurBestSellers {...best_sellers} />
-			<Features {...features} />
-			<Testimonials {...testimonials} />
-			<HowDoesItWork {...how_does_it_work} />
+			{hero_banner && <HeroBanner {...hero_banner} />}
+			{subline && <Subline text={subline} />}
+			{best_sellers && <ShopOurBestSellers {...best_sellers} />}
+			{features && <Features {...features} />}
+			{testimonials && <Testimonials {...testimonials} />}
+			{how_does_it_work && <HowDoesItWork {...how_does_it_work} />}
 			<NeedHelp />
 			<Footer />
 		</>
@@ -186,12 +190,16 @@ Home.getInitialProps = ({
 	customParams,
 	...rest
 }: Ctx<string>) => {
-	return Promise.resolve({
-		data: {
-			...response,
-			data_type: 'home'
-		}
-	});
+	const promise = getHomePageData()
+		.then((response) => {
+			return {
+				pagedata: {
+					...response,
+					data_type: 'home'
+				}
+			}
+		});
+	return promise;
 }
 
 export default Home;
