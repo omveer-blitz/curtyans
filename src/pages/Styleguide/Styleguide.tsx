@@ -97,10 +97,10 @@ export default () => {
 					</Text>
 					<Flexbox justify="flex-start" align="center" direction="row">
 						<FlexboxItem mt="sm" mb="sm" colspan={24} colspanXL={6}>
-							<Button type="primary" full>Book a Free Visit</Button>
+							<Button type="primary" full>Book a Free Consultation</Button>
 						</FlexboxItem>
 						<FlexboxItem mt="sm" mb="sm" colspan={24} colspanXL={6}>
-							<Button type="secondary" full>Book a Free Visit</Button>
+							<Button type="secondary" full>Book a Free Consultation</Button>
 						</FlexboxItem>
 						<FlexboxItem mt="sm" mb="sm" colspan={24} colspanXL={6}>
 							<Link to={"/"}>Back to Home Page</Link>

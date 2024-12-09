@@ -53,7 +53,6 @@ const FeatureItem = (props: FeatureItemProps) => {
 			<FlexboxItem colspan={24} colspanXL={11}>
 					<Text fontStyleGuide="heading6" color="mine-shaft" mb="xs">{props.title}</Text>
 					<Text fontStyleGuide="body4" color="mine-shaft" mb="xxl">{props.description}</Text>
-					<Button type="secondary" to="/book-visit-form">Book a Free Visit</Button>
 			</FlexboxItem>
 		</Flexbox>
 	)
@@ -62,7 +61,7 @@ const FeatureItem = (props: FeatureItemProps) => {
 export default (props: FeaturesProps) => {
 	return (
 		<WidgetContainer>
-			<Text align="center" color="mine-shaft" fontStyleGuide="heading3" mb="2xl">{props.title || 'Key Features'}</Text>
+			<Text align="center" color="mine-shaft" fontStyleGuide="heading3" mb="2xl">{props.title || 'What sets us apart'}</Text>
 			{(props.entities || []).map((featureItem, index) => (
 				<FeatureItem
 					index={index}

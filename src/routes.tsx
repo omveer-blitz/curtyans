@@ -83,5 +83,13 @@ export default [
       Placeholder: PageSpinner,
       chunkName: "PrivacyPolicy"
     }),
-	},
+  },
+  {
+		path: "/product-categories",
+		Component: asyncComponent({
+      loader: () => import(/* webpackChunkName: "/ProductCategories" */ "./pages/ProductCategories"),
+      Placeholder: PageSpinner,
+      chunkName: "/ProductCategories"
+    }),
+  },
 ];

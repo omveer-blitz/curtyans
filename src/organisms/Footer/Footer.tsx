@@ -63,13 +63,13 @@ const AddressBar = () => {
 				<FlexboxItem colspan={"auto"} mr="sm">
 					<LocationPin />
 				</FlexboxItem>
-				<FlexboxItem colspan={"auto"}>
+				<FlexboxItem colspan={18}>
 					<Text color="mine-shaft" fontStyleGuide="body5" mb="xs">
-						Address Line 1
+						Sharjah Publishing City Free Zone, Sharjah, United Arab Emirates
 					</Text>
-					<Text color="mine-shaft" fontStyleGuide="body5" mb="xs">
+					{/* <Text color="mine-shaft" fontStyleGuide="body5" mb="xs">
 						Address Line 2
-					</Text>
+					</Text> */}
 				</FlexboxItem>
 			</Flexbox>
 			<Flexbox direction="row" justify="flex-start" align="flex-start" mb="sm">
@@ -78,7 +78,7 @@ const AddressBar = () => {
 				</FlexboxItem>
 				<FlexboxItem colspan={"auto"}>
 					<Text color="mine-shaft" fontStyleGuide="body5" mb="xs">
-						+971 42 711 8566
+						+971 564989555
 					</Text>
 				</FlexboxItem>
 			</Flexbox>
@@ -88,7 +88,7 @@ const AddressBar = () => {
 				</FlexboxItem>
 				<FlexboxItem colspan={"auto"}>
 					<Text color="mine-shaft" fontStyleGuide="body5" mb="xs">
-						emailuser@gmail.com
+					info@curtayns.com
 					</Text>
 				</FlexboxItem>
 			</Flexbox>
@@ -128,6 +128,9 @@ export default () => {
 									<Text as="div" color="mine-shaft" fontStyleGuide="body4" mb="sm">
 										<Link type="primary" to="/privacy-policy">Privacy Policy</Link>
 									</Text>
+									<Text as="div" color="mine-shaft" fontStyleGuide="body4" mb="sm">
+										<Link type="primary" to="/product-categories">Product Categories</Link>
+									</Text>
 								</FlexboxItem>
 								<FlexboxItem colspan={12}>
 									<Text as="div" color="mine-shaft" fontStyleGuide="body4" mb="sm">
@@ -137,7 +140,7 @@ export default () => {
 										<Link type="primary" to="/collection">Our Collection</Link>
 									</Text>
 									<Text as="div" color="mine-shaft" fontStyleGuide="body4" mb="sm">
-										<Link type="primary" to="/book-visit-form">Book a Free Visit</Link>
+										<Link type="primary" to="/book-visit-form">Book a Free Consultation</Link>
 									</Text>
 								</FlexboxItem>
 							</Flexbox>

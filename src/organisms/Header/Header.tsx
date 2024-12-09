@@ -105,7 +105,7 @@ const Header = () => {
 						<FlexboxItem colspan={"auto"}>
 							<Flexbox direction="row" justify="space-between" align="center" gap={8} wrap="nowrap">
 								<Button to={"/book-visit-form"} type="primary">
-									{"Book a Free Visit"}
+									{"Book a Free Consultation"}
 								</Button>
 								<ResponsiveDiv
 									xl={css`
