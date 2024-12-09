@@ -58,7 +58,7 @@ export default () => {
 
 				<Flexbox direction="row" justify="center" align="stretch" mt="2xl">
 					<FlexboxItem colspan={11} colspanXL={6}>
-						<Button full type="primary" to="/book-visit-form">Book a Free Visit</Button>
+						<Button full type="primary" to="/book-visit-form">Book a Free Consultation</Button>
 					</FlexboxItem>
 					<FlexboxItem colspan={1} />
 					<FlexboxItem colspan={11} colspanXL={6}>

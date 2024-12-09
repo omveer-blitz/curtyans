@@ -3,8 +3,8 @@ const homeAPIResponse = {
 	code: 200,
 	data: {
 		hero_banner: {
-			title: "Elevate your space",
-			sub_title: "With Custom Curtains, Blinds, and Wallpapers",
+			title: "Elevate Your Space with Custom Curtains, Blinds, and Wallpapers is a single sentence.",
+			sub_title: "",
 			image_url: "http://d3m6ysvindj7rm.cloudfront.net/hero-banner.jpg"
 		},
 		subline: "Transform your home with designs crafted to fit your style and space. Experience elegance, precision, and unmatched quality - all tailored for you.",

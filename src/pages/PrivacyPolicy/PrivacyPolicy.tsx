@@ -14,48 +14,73 @@ export default () => {
 
 			<PageContainer>
 				<Text as="h3" color="flamingo" fontStyleGuide="heading3" align="center" mb="2xl">Privacy Policy</Text>
-				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Our Story</Text>
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Privacy Policy for Curtayns</Text>
 				<Text as="p" fontStyleGuide="body4" color="mine-shaft" mb="lg">
-					At curtayns.com, we believe your home is a reflection of your personality, and every detail matters. Founded with the mission to bring elegance and functionality to living spaces, we specialize in crafting custom-made curtains, blinds, and wallpapers that enhance both style and comfort.
-					<br />
-					From modest beginnings, we have grown into a trusted name in home decor across the UAE, offering a seamless blend of craftsmanship, innovation, and premium quality.
-					<br />
-					Whether it’s elegant drapes, functional blinds, or statement wallpapers, we’re here to turn your vision into reality. Explore our curated collections to find decor that perfectly complements your space.
+				  At Curtayns, we value your privacy and are committed to protecting your personal information. This policy outlines how we collect, use, and safeguard your data when you interact with our website.
 				</Text>
-				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Our Vision</Text>
-				<Text as="p" fontStyleGuide="body4" color="mine-shaft" mb="lg">
-					"To revolutionize home decor by offering tailored curtains, blinds and more that combine functionality with elegance."
-				</Text>
-				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Our Values</Text>
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Information We Collect</Text>
+
 				<Text as="div" fontStyleGuide="body4" color="mine-shaft" mb="lg">
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>1.&nbsp;</b> <b>Customer-Centricity</b>: We place your needs and preferences at the heart of everything we do, ensuring every product reflects your unique taste and style.
+					<b>&#x2022;&nbsp;</b>Personal details (name, email, phone number) when you make a purchase or inquiry.
 					</Text>
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>2.&nbsp;</b> <b>Excellence in Craftsmanship</b>: We believe in delivering nothing short of perfection. From premium materials to precise tailoring, our products are crafted with attention to the finest details.
+						<b>&#x2022;&nbsp;</b>Payment information for order processing, managed securely via trusted third-party providers.
 					</Text>
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>3.&nbsp;</b> <b>Integrity & Trust</b>: Transparent pricing, honest communication, and dependable service are the cornerstones of our relationship with our customers.
+						<b>&#x2022;&nbsp;</b>Transparent pricing, honest communication, and dependable service are the cornerstones of our relationship with our customers.
 					</Text>
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>4.&nbsp;</b> <b>Community Focus</b>: Proudly serving the UAE, we celebrate local tastes and preferences while delivering globally inspired designs.
+						<b>&#x2022;&nbsp;</b>Browsing data (cookies, IP addresses) for improving website experience.
 					</Text>
 				</Text>
-				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Why Choose Us</Text>
+
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">How We Use Your Information</Text>
+
 				<Text as="div" fontStyleGuide="body4" color="mine-shaft" mb="lg">
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>1.&nbsp;</b> <b>Custom Solutions</b>: Every order is made just for you, ensuring a unique and perfect fit.
+					<b>&#x2022;&nbsp;</b>To process orders and deliver products.
 					</Text>
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>2.&nbsp;</b> <b>Exceptional Craftsmanship</b>: Combining functionality with style.
+						<b>&#x2022;&nbsp;</b>To communicate updates, offers, and customer support.
 					</Text>
 					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>3.&nbsp;</b> <b>Seamless Experience</b>: Shop online, visualize your decor, and enjoy white-glove delivery and installation.
-					</Text>
-					<Text as="div" fontStyleGuide="body4" color="mine-shaft" ml="md">
-						<b>4.&nbsp;</b> <b>Local Expertise</b>: Proudly based in the UAE, we understand the unique preferences of our region.
+						<b>&#x2022;&nbsp;</b>To enhance user experience and analyze website performance.
 					</Text>
 				</Text>
+
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Sharing Your Data</Text>
+
+				<Text as="div" fontStyleGuide="body4" color="mine-shaft" mb="lg">
+					<Text as="div" fontStyleGuide="body4" color="mine-shaft">
+					We do not sell your personal information. Limited data may be shared with trusted partners to fulfill orders, process payments, or improve our services.
+					</Text>
+				</Text>
+
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Data Security</Text>
+
+				<Text as="div" fontStyleGuide="body4" color="mine-shaft" mb="lg">
+					<Text as="div" fontStyleGuide="body4" color="mine-shaft">
+					Your information is protected with advanced encryption and strict access controls.
+					</Text>
+				</Text>
+
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Your Rights</Text>
+
+				<Text as="div" fontStyleGuide="body4" color="mine-shaft" mb="lg">
+					<Text as="div" fontStyleGuide="body4" color="mine-shaft">
+					You can request access, correction, or deletion of your personal data anytime.
+					</Text>
+				</Text>
+
+				<Text as="p" fontStyleGuide="heading7" color="flamingo" mb="md">Contact Us</Text>
+
+				<Text as="div" fontStyleGuide="body4" color="mine-shaft" mb="lg">
+					<Text as="div" fontStyleGuide="body4" color="mine-shaft">
+					For privacy concerns or inquiries, email us at <b>privacy@curtayns.com.</b>
+					</Text>
+				</Text>
+
 			</PageContainer>
 			<Footer />
 		</>

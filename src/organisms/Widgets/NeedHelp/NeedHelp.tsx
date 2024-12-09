@@ -38,9 +38,9 @@ export default () => {
 			<ResponsiveDiv css={styles.wrapper}>
 				<Flexbox direction="row" justify="space-between" align="center">
 					<FlexboxItem colspan={24} colspanXL={16} mb="sm">
-						<Text fontStyleGuide="heading3" color="mine-shaft" mb="sm">Need Help?</Text>
+						<Text fontStyleGuide="heading3" color="mine-shaft" mb="sm">We’re Here to Help</Text>
 						<Text fontStyleGuide="body1" color="mine-shaft" mb="2xl" textWrap="balance">
-							Our team is always a message away.
+						Have a question or need assistance? Our team is ready to support you every step of the way.
 						</Text>
 						<Text fontStyleGuide="body4" color="mine-shaft" mb="md" textWrap="balance">
 							We’re available on WhatsApp for quick and easy support! Feel free to reach out anytime, and we’ll be happy to assist you.

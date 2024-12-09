@@ -235,7 +235,7 @@ export default () => {
 						<FlexboxItem colspan={24} colspanXL={18}>
 
 							<Text mb="xl" as="h1" color="mine-shaft" fontStyleGuide="heading5" fontStyleGuideXL="heading2" align="center">
-								Book a Free Visit
+								Book a Free Consultation
 							</Text>
 							<Card>
 								<ResponsiveDiv

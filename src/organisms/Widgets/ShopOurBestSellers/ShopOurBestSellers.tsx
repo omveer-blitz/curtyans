@@ -127,7 +127,7 @@ export default (props: ShopOurBestsellersProps) => {
 				))}
 			</Flexbox>
 			<Flexbox direction="row" justify="center" align="center" mt="xxl">
-				<Button type="primary" to="/book-visit-form">Book a Free Visit</Button>
+				<Button type="primary" to="/book-visit-form">Book a Free Consultation</Button>
 			</Flexbox>
 		</WidgetContainer>
 	)
